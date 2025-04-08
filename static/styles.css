@@ -1,9 +1,34 @@
+/* 设置整个页面的背景图片 */
+body {
+    background-image: url('background.jpg'); /* 图片路径根据实际情况修改 */
+    background-size: cover; /* 让背景图片覆盖整个页面 */
+    background-repeat: no-repeat; /* 不重复显示背景图片 */
+    background-attachment: fixed; /* 固定背景图片，不随滚动条滚动 */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* 水平居中 */
+    justify-content: center; /* 垂直居中 */
+    min-height: 100vh; /* 确保内容至少占据整个视口高度 */
+    margin: 0;
+    font-family: Arial, sans-serif; /* 设置字体 */
+}
+
 /* 选择所有 <a> 标签里表示文章标题的元素，设置字体大小为 20px */
 ul li a {
-    font-size: 14px;
+    font-size: 20px;
 }
 
 /* 选择所有表单里的 <input> 按钮元素，设置字体大小为 14px */
 form input[type="submit"] {
-    font-size: 12px;
+    font-size: 14px;
+}
+
+/* 为文章列表、文章详情等内容添加容器样式，使其在背景上更突出 */
+.container {
+    background-color: rgba(255, 255, 255, 0.6); /* 半透明白色背景 */
+    padding: 20px;
+    border-radius: 10px; /* 圆角边框 */
+    width: 80%; /* 容器宽度 */
+    max-width: 800px; /* 最大宽度 */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* 阴影效果 */
 }
