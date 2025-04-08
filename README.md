@@ -25,6 +25,6 @@
 最后的页面结果如下：
 
 
-![app](app.jpg)
+![app](static/app.jpg)
 
    
