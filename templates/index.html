@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>有关Flask的文章</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+
+<body>
+    <h1>有关Flask的文章</h1>
+    <ul>
+        {% for article in articles %}
+        <li>
+            <a href="{{ url_for('article', article_id=article.id) }}">{{ article.title }}</a>
+            <p style="font-size: 12px;">Create_at: {{ article.created_at.strftime('%Y-%m-%d %H:%M:%S') }}</p>
+            <form action="{{ url_for('delete', article_id=article.id) }}" method="post" style="display: inline;">
+                <input type="submit" value="删除">
+            </form>
+            <a href="{{ url_for('edit', article_id=article.id) }}">修改</a>
+        </li>
+        {% endfor %}
+    </ul>
+    <form action="{{ url_for('submit') }}" method="post">
+        <label for="title">标题:</label>
+        <input type="text" id="title" name="title" required><br>
+        <label for="content">内容:</label>
+        <textarea id="content" name="content" required></textarea><br>
+        <input type="submit" value="提交文章">
+    </form>
+</body>
+
+</html>
