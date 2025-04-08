@@ -11,6 +11,8 @@
 4.文章修改
    ·编辑页面展示：/edit/<int:article_id> 路由对应的 edit 视图函数在接收到 GET 请求时，根据文章 id 从数据库获取文章信息，渲染 edit.html 模板，展示包含文章当前标题和内容的编辑页面。
    ·修改提交处理：当 edit 视图函数接收到 POST 请求时，从表单中获取修改后的标题和内容，更新数据库中对应文章的信息，成功后重定向到修改后的文章详情页面。若更新过程出现异常，会打印错误信息并回滚数据库事务 。
+
+
 最后的页面结果如下：
 ![app](https://github.com/Daisy1259/Simple-Project-use-Flask/blob/main/Flask Project.jpg)
 
