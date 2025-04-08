@@ -8,14 +8,16 @@
 </head>
 
 <body>
-    <h1>{{ article.title }}</h1>
-    <p style="font-size: 12px;">Create_at: {{ article.created_at.strftime('%Y-%m-%d %H:%M:%S') }}</p>
-    <p>{{ article.content }}</p>
-    <form action="{{ url_for('delete', article_id=article.id) }}" method="post" style="display: inline;">
-        <input type="submit" value="删除">
-    </form>
-    <a href="{{ url_for('edit', article_id=article.id) }}">修改</a>
-    <a href="{{ url_for('index') }}">返回文章列表</a>
+    <div class="container">
+        <h1>{{ article.title }}</h1>
+        <p style="font-size: 12px;">Create_at: {{ article.created_at.strftime('%Y-%m-%d %H:%M:%S') }}</p>
+        <p>{{ article.content }}</p>
+        <form action="{{ url_for('delete', article_id=article.id) }}" method="post" style="display: inline;">
+            <input type="submit" value="删除">
+        </form>
+        <a href="{{ url_for('edit', article_id=article.id) }}">修改</a>
+        <a href="{{ url_for('index') }}">返回文章列表</a>
+    </div>
 </body>
 
 </html>
