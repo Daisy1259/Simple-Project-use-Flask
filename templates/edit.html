@@ -8,15 +8,17 @@
 </head>
 
 <body>
-    <h1>编辑文章 - {{ article.title }}</h1>
-    <form action="{{ url_for('edit', article_id=article.id) }}" method="post">
-        <label for="title">标题:</label>
-        <input type="text" id="title" name="title" value="{{ article.title }}" required><br>
-        <label for="content">内容:</label>
-        <textarea id="content" name="content" required>{{ article.content }}</textarea><br>
-        <input type="submit" value="保存修改">
-    </form>
-    <a href="{{ url_for('article', article_id=article.id) }}">取消</a>
+    <div class="container">
+        <h1>编辑文章 - {{ article.title }}</h1>
+        <form action="{{ url_for('edit', article_id=article.id) }}" method="post">
+            <label for="title">标题:</label>
+            <input type="text" id="title" name="title" value="{{ article.title }}" required><br>
+            <label for="content">内容:</label>
+            <textarea id="content" name="content" required>{{ article.content }}</textarea><br>
+            <input type="submit" value="保存修改">
+        </form>
+        <a href="{{ url_for('article', article_id=article.id) }}">取消</a>
+    </div>
 </body>
 
 </html>
