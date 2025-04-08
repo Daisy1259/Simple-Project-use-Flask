@@ -1,0 +1,9 @@
+/* 选择所有 <a> 标签里表示文章标题的元素，设置字体大小为 20px */
+ul li a {
+    font-size: 14px;
+}
+
+/* 选择所有表单里的 <input> 按钮元素，设置字体大小为 14px */
+form input[type="submit"] {
+    font-size: 12px;
+}
